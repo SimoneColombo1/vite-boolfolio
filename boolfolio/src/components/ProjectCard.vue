@@ -34,7 +34,11 @@ export default {
     <div v-for="project in projects" class="card">
       <h3>{{ project.nome }}</h3>
       <p>Descrizione: {{ project.descrizione }}</p>
-      <p>Data di inizio del progetto: {{ project.data_inizio }}</p>
+      <p>
+        <font-awesome-icon :icon="['fas', 'calendar-days']" /> Data di inizio
+        del progetto:
+        {{ project.data_inizio }}
+      </p>
       <p>Data fine del progetto: {{ project.data_fine }}</p>
       <p v-if="project.completato > 0">Completato: Si</p>
       <p v-else>Completato: No</p>
@@ -44,6 +48,7 @@ export default {
 
 <style lang="scss">
 .card-container {
+  margin-top: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

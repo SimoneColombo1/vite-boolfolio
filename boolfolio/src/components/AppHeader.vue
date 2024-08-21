@@ -6,13 +6,16 @@ export default {
 </script>
 <template>
   <nav>
-    <span><h1>Projects</h1></span>
+    <span
+      ><img src="../assets/img/pngwing.com.png" />
+      <h1>Projects</h1></span
+    >
 
-    <span class="links">
-      <a href="">Link</a>
-      <a href="">Link</a>
-      <a href="">Link</a>
-    </span>
+    <ul class="links">
+      <li><a href="">Link</a></li>
+      <li><a href="">Link</a></li>
+      <li><a href="">Link</a></li>
+    </ul>
   </nav>
 </template>
 
@@ -24,22 +27,36 @@ nav {
   border-bottom: 0.3px solid gray;
   vertical-align: middle;
   .links {
-    margin-top: 0.8rem;
+    margin: 0.8rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
     a {
       margin-left: 0.3rem;
 
       text-decoration: none;
 
       &:hover {
-        color: black;
+        color: white;
       }
     }
   }
 }
 span {
-  padding: 1rem;
+  margin: 0rem 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   h1 {
     color: #3787fd;
+  }
+  img {
+    width: 2.5rem;
+    height: 2.5rem;
+    filter: brightness(0) saturate(100%) invert(43%) sepia(38%) saturate(3585%)
+      hue-rotate(202deg) brightness(102%) contrast(98%);
   }
 }
 </style>
