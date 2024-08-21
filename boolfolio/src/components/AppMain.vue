@@ -1,7 +1,11 @@
 <script>
 import axios from "axios";
-
+import ProjectCard from "./ProjectCard.vue";
 export default {
+  components: {
+    ProjectCard,
+  },
+
   data() {
     return {
       projects: [],
@@ -15,6 +19,7 @@ export default {
         })
         .then((response) => {
           console.log(response.data.results.data);
+          this.projects = response.data.results.data;
         })
         .catch(function (error) {
           console.log(error);
@@ -29,6 +34,8 @@ export default {
   },
 };
 </script>
-<template></template>
+<template>
+  <ProjectCard />
+</template>
 
 <style scoped lang="scss"></style>

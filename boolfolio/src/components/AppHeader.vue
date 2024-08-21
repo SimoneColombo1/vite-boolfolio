@@ -4,6 +4,42 @@ export default {
   components: {},
 };
 </script>
-<template><h1>eee</h1></template>
+<template>
+  <nav>
+    <span><h1>Projects</h1></span>
 
-<style scoped lang="scss"></style>
+    <span class="links">
+      <a href="">Link</a>
+      <a href="">Link</a>
+      <a href="">Link</a>
+    </span>
+  </nav>
+</template>
+
+<style scoped lang="scss">
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 0.3px solid gray;
+  vertical-align: middle;
+  .links {
+    margin-top: 0.8rem;
+    a {
+      margin-left: 0.3rem;
+
+      text-decoration: none;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+span {
+  padding: 1rem;
+  h1 {
+    color: #3787fd;
+  }
+}
+</style>
