@@ -2,6 +2,21 @@
 export default {
   name: "",
   components: {},
+  data() {
+    return {
+      NavLink: [
+        {
+          label: "Home page",
+          name: "home",
+        },
+
+        {
+          label: "All projects",
+          name: "projects",
+        },
+      ],
+    };
+  },
 };
 </script>
 <template>
@@ -12,9 +27,11 @@ export default {
     >
 
     <ul class="links">
-      <li><a href="">Link</a></li>
-      <li><a href="">Link</a></li>
-      <li><a href="">Link</a></li>
+      <li v-for="NavItem in NavLink">
+        <router-link class="link" :to="{ name: NavItem.name }">{{
+          NavItem.label
+        }}</router-link>
+      </li>
     </ul>
   </nav>
 </template>
@@ -32,7 +49,7 @@ nav {
     display: flex;
     flex-direction: row;
     list-style: none;
-    a {
+    .link {
       margin-left: 0.3rem;
 
       text-decoration: none;

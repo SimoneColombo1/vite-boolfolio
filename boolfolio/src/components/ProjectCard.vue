@@ -35,19 +35,23 @@ export default {
 </script>
 <template>
   <div class="container card-container">
-    <div v-for="project in projects" class="card">
-      <h3>{{ project.nome }}</h3>
-      <p>Descrizione: {{ project.descrizione }}</p>
-      <p>
-        <font-awesome-icon :icon="['fas', 'calendar-days']" /> Data di inizio
-        del progetto:
-        {{ project.data_inizio }}
-      </p>
-      <p>Data fine del progetto: {{ project.data_fine }}</p>
-      <p v-if="project.completato > 0">Completato: Si</p>
-      <p v-else>Completato: No</p>
-    </div>
-
+    <router-link
+      v-for="project in projects"
+      :to="{ name: 'SingleProject', params: { id: project.id } }"
+    >
+      <div class="card">
+        <h3>{{ project.nome }}</h3>
+        <p>Descrizione: {{ project.descrizione }}</p>
+        <p>
+          <font-awesome-icon :icon="['fas', 'calendar-days']" /> Data di inizio
+          del progetto:
+          {{ project.data_inizio }}
+        </p>
+        <p>Data fine del progetto: {{ project.data_fine }}</p>
+        <p v-if="project.completato > 0">Completato: Si</p>
+        <p v-else>Completato: No</p>
+      </div>
+    </router-link>
     <a
       href=""
       class="btn btn-primary btn-lg"
