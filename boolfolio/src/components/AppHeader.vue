@@ -23,7 +23,7 @@ export default {
   <nav>
     <span
       ><img src="../assets/img/pngwing.com.png" />
-      <h1>Projects</h1></span
+      <h1>Project Manager 1.0</h1></span
     >
 
     <ul class="links">
@@ -38,10 +38,12 @@ export default {
 
 <style scoped lang="scss">
 nav {
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 0.3px solid gray;
+
   vertical-align: middle;
   .links {
     margin: 0.8rem;

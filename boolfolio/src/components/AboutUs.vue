@@ -28,6 +28,8 @@ export default {};
 
 <style scoped lang="scss">
 .AboutUs {
+  max-width: 1500px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

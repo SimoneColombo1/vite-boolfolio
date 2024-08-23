@@ -2,24 +2,31 @@
 export default {};
 </script>
 <template>
-  <section class="YourProjects">
-    <span>
-      <h4>Manage your projects</h4>
-      <p>
-        Thanks to our tool you will be able to manage your projects in a simple
-        and detailed way.
-      </p></span
-    ><span>
-      <router-link class="btn btn-md button" :to="{ name: 'projects' }">
-        Go to your projects
-        <i class="fa-solid fa-arrow-right-long"></i></router-link
-    ></span>
+  <section class="project-container">
+    <section class="YourProjects">
+      <span>
+        <h4>Manage your projects</h4>
+        <p>
+          Thanks to our tool you will be able to manage your projects in a
+          simple and detailed way.
+        </p></span
+      ><span>
+        <router-link class="btn btn-md button" :to="{ name: 'projects' }">
+          Go to your projects
+          <i class="fa-solid fa-arrow-right-long"></i></router-link
+      ></span>
+    </section>
   </section>
 </template>
 
 <style scoped lang="scss">
-.YourProjects {
+.project-container {
   background-color: #0d6af2;
+}
+
+.YourProjects {
+  max-width: 1500px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   padding: 5rem;

@@ -36,28 +36,33 @@ export default {
 </script>
 
 <template>
-  <section class="container">
-    <section class="faq-container">
-      <div class="faqs">
-        <div v-for="(faq, index) in faqs" :key="index" class="single-faq">
-          <p @click="toggleAnswer(index)" style="cursor: pointer">
-            {{ faq.Question }}
-          </p>
-          <p v-if="faq.isVisible">
-            {{ faq.Answer }}
-          </p>
-        </div>
+  <section class="faq-container">
+    <div class="faqs">
+      <h4>F.A.Q</h4>
+      <div v-for="(faq, index) in faqs" :key="index" class="single-faq">
+        <p @click="toggleAnswer(index)" style="cursor: pointer">
+          {{ faq.Question }}
+        </p>
+        <p v-if="faq.isVisible">
+          {{ faq.Answer }}
+        </p>
       </div>
-    </section>
+    </div>
   </section>
 </template>
 
 <style scoped>
 .faq-container {
   display: flex;
-  max-width: 1000px;
+
   padding: 2rem;
+  h4 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
   .faqs {
+    max-width: 1500px;
+    margin: 0 auto;
     display: flex;
     justify-content: start;
     flex-direction: column;

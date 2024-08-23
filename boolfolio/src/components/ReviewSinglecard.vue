@@ -110,6 +110,9 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  .fa-star {
+    color: #0d6af2;
+  }
   img {
     border-radius: 50%;
   }

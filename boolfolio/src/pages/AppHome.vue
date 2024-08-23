@@ -15,11 +15,13 @@ export default {
 };
 </script>
 <template>
-  <welcome />
-  <AboutUs />
-  <YourProjects />
-  <reviews />
-  <Faq />
+  <section class="AppMain">
+    <welcome />
+    <AboutUs />
+    <YourProjects />
+    <reviews />
+    <Faq />
+  </section>
 </template>
 
 <style scoped lang="scss"></style>
