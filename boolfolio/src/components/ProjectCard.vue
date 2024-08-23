@@ -69,7 +69,7 @@ export default {
       v-for="project in projects"
       :to="{ name: 'SingleProject', params: { id: project.id } }"
     >
-      <div class="card">
+      <div class="card project-card">
         <h3>{{ project.nome }}</h3>
         <p>Descrizione: {{ project.descrizione }}</p>
         <p>
@@ -109,15 +109,16 @@ img {
   flex-direction: row;
   overflow: hidden;
   width: 100vw;
-
+  .project-card {
+    &:hover {
+      background-color: lightgray;
+    }
+  }
   div {
     width: 18rem;
     height: 25rem;
     margin: 1rem;
     padding: 1rem;
-    &:hover {
-      background-color: lightgray;
-    }
 
     h3 {
       color: #3787fd;
