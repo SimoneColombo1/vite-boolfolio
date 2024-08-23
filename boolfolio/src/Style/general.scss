@@ -2,6 +2,14 @@
 
 body {
   background-color: #dcdcdc;
+
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 header {
