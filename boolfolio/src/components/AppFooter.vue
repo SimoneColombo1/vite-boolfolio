@@ -37,21 +37,23 @@ export default {
 <template>
   <footer>
     <section class="main-footer">
-      <ul>
-        <li v-for="link in NavLink1">
-          <a href="">{{ link }}</a>
-        </li>
-      </ul>
-      <ul>
-        <li v-for="link in NavLink2">
-          <a href="">{{ link }}</a>
-        </li>
-      </ul>
-      <ul>
-        <li v-for="link in NavLink3">
-          <a href="">{{ link }}</a>
-        </li>
-      </ul>
+      <nav class="link-footer">
+        <ul>
+          <li v-for="link in NavLink1">
+            <a href="">{{ link }}</a>
+          </li>
+        </ul>
+        <ul>
+          <li v-for="link in NavLink2">
+            <a href="">{{ link }}</a>
+          </li>
+        </ul>
+        <ul>
+          <li v-for="link in NavLink3">
+            <a href="">{{ link }}</a>
+          </li>
+        </ul>
+      </nav>
     </section>
   </footer>
 </template>
@@ -59,15 +61,24 @@ export default {
 <style scoped lang="scss">
 .main-footer {
   display: flex;
+  justify-content: space-between;
 
-  ul {
-    list-style: none;
+  .link-footer {
+    display: flex;
 
-    width: rem;
-    li {
-      font-size: 0.7rem;
-      margin: 1rem;
+    ul {
+      list-style: none;
+
+      width: rem;
+      li {
+        font-size: 0.7rem;
+        margin: 1rem;
+      }
     }
+  }
+
+  .socials {
+    display: flex;
   }
 }
 </style>
